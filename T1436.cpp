@@ -22,6 +22,7 @@ void findPartitions(int n, int max_current, vector<int>& current_partition){
     }
 
     for (int i = max_current; i > 0; i--){
+        // n là phần còn lại, xem i nhỏ hơn n thì phân tích tiếp
         if (i <= n){
             current_partition.push_back(i);
             findPartitions(n - i, i, current_partition); // i de khong lap hoan vi
