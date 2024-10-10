@@ -22,7 +22,6 @@ int main(){
             for (int i = 1; i <= k; i++){
                 cout << n - k + i << " ";
             }
-            
         }
         else{
             a[index]--;

@@ -14,7 +14,7 @@ int main(){
 
         int i = k;
         
-        while (a[i] == n - k + i && i >= 1){
+        while (a[i] == n - k + i && i >= 1){    
             i--;
         }
 
