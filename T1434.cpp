@@ -18,10 +18,13 @@ int main(){
             index--;
         }
 
+     //   cout << index << " ";
+
         if (index == 1 && a[index] == 1){
             for (int i = 1; i <= k; i++){
                 cout << n - k + i << " ";
             }
+            
         }
         else{
             a[index]--;
