@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int k;
+int k, n;
 
 void in(vector<int> res) {
     for (int i = 0; i < res.size(); i++) {
@@ -11,20 +11,21 @@ void in(vector<int> res) {
     cout << endl;
 }
 
-void Try(int i, vector<int>& res, int a[]) {
+void Try(int x, vector<int>& res, int a[]) {
     if (res.size() == k) {
         in(res);
         return;        
     }
-
-    if (res.empty() || res[res.size() - 1] > a[i]) {
-        res.push_back(a[i]);
-        Try(i + 1, res, a);
-        res.pop_back();
+    for (int i = x; i < n; i++) {
+        if (i == 0 || a[i] < res[res.size() - 1]) {
+            res.push_back(a[i]);
+            Try(i + 1, res, a);
+            res.pop_back();
+        } 
     }
 }
+
 int main() {
-    int n;
     cin >> n >> k;
     int a[n];
     for (int i = 0; i < n; i++) cin >> a[i];
