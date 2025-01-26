@@ -21,12 +21,22 @@ void insertAtTail(Node*& head, int value) {
         return;
     }
 
-    Node* temp = head; // Node tạm thời để không thay đổi head
+    Node* temp = head;
     while (temp->next != nullptr) {
         temp = temp->next;
     }
     temp->next = newNode;
-} 
+}
+
+void replace(Node*& head, int a, int b) {
+    Node* temp = head;
+    while (temp != nullptr) {
+        if (temp->data == a) {
+            temp->data = b;
+        }
+        temp = temp->next;
+    }
+}
 
 void printList(Node* head) {
     Node* temp = head;
@@ -34,9 +44,7 @@ void printList(Node* head) {
         cout << temp->data << " ";
         temp = temp->next;
     }
-    cout << endl;
 }
-
 int main() {
     Node* head = nullptr;
     int n;
@@ -48,5 +56,9 @@ int main() {
         insertAtTail(head, value);
     }
 
+    int a, b;
+    cin >> a >> b;
+    replace(head, a, b);
     printList(head);
+    return 0;
 }
