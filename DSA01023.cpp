@@ -2,10 +2,6 @@
 
 using namespace std;
 
-#include<bits/stdc++.h>
-
-using namespace std;
-
 void Try(int n, int k, int start, string s, vector<string>& v) {
     if (k == 0) {
         v.push_back(s);
