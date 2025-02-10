@@ -6,10 +6,11 @@ int main() {
     int t;
     cin >> t;
     stack<int> st;
-    
+
     while (t--) {
         string s;
         getline(cin >> ws, s);
+        
         if (s == "POP") {
             if (!st.empty()) st.pop();
         }
