@@ -16,14 +16,8 @@ int main() {
 
         int i = 0, j = 0;
         while (i < n && j < m) {
-            if (a[i] < b[j]) {
-                cout << a[i] << " ";
-                i++;
-            }
-            else {
-                cout << b[j] << " ";
-                j++;
-            }
+            if (a[i] < b[j]) cout << a[i++] << " ";
+            else cout << b[j++] << " ";
         }
 
         while (i < n) cout << a[i++] << " ";
