@@ -23,7 +23,7 @@ void Try(vector<int> path, int sum, int start) {
             path.push_back(v[i]);
             Try(path, sum + v[i], i);
             path.pop_back();
-        }
+        }    
     }
 }
 
