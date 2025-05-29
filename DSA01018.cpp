@@ -9,7 +9,7 @@ int main() {
     cin >> t;
     while (t--) {
         cin >> n >> k;
-        vector<int> v(k);
+        vector<int> v(k + 1);
         for (int i = 1; i <= k; i++) {
             cin >> v[i];
         }  
